@@ -353,7 +353,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  90
+                  231
                 </span>
               
 
@@ -392,7 +392,7 @@
       
         
           
-            <p>因为工作原因，需要能简单的控制一些设备的播放和录音功能，就萌生了一个设计想法，设计一个AudioManager来掩盖平台差异，使上层代码用一套代码就能在多个平台实现音频操作，实现跨平台能力。<br>代码已经开源：<a href="git@github.com:season4675/AudioManager.git">git@github.com:season4675/AudioManager.git</a><br><img src="/2019/01/31/一个简易跨平台AudioManager详细设计/AudioManagerFramework.png" alt="AudioManagerFramework.png"></p>
+            <h1 id="AudioManager简介"><a href="#AudioManager简介" class="headerlink" title="AudioManager简介"></a>AudioManager简介</h1><p>因为工作原因，需要能简单的控制一些设备的播放和录音功能，就萌生了一个设计想法，设计一个AudioManager来掩盖平台差异，使上层代码用一套代码就能在多个平台实现音频操作，实现跨平台能力。<br>代码已经开源：<a href="git@github.com:season4675/AudioManager.git">git@github.com:season4675/AudioManager.git</a><br><img src="/2019/01/31/一个简易跨平台AudioManager详细设计/AudioManagerFramework.png" alt="AudioManagerFramework.png"><br>以上框架图显示了这个跨平台AudioManager框架，非常简单。API层对上层放出了简易好用的接口。向下有个音频引擎适配层，根据运行平台的不同选择不同的引擎，同时这一层也加入了一定的格式转换能力。再往下就是和硬件平台强相关的音频引擎模块了。Linux平台使用ALSA和pulseaudio，Android平台可以使用OpenSLES和TinyALSA，iOS/Mac平台可以使用AudioUnit和AudioQueue，基本覆盖了当下最流行的几个平台。</p>
 
           
         
@@ -767,7 +767,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共469字</span>
+  <span class="post-count">博客全站共610字</span>
 </div>
 
         

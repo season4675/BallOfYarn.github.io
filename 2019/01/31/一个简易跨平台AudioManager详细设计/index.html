@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="因为工作原因，需要能简单的控制一些设备的播放和录音功能，就萌生了一个设计想法，设计一个AudioManager来掩盖平台差异，使上层代码用一套代码就能在多个平台实现音频操作，实现跨平台能力。代码已经开源：git@github.com:season4675/AudioManager.git">
+<meta name="description" content="AudioManager简介因为工作原因，需要能简单的控制一些设备的播放和录音功能，就萌生了一个设计想法，设计一个AudioManager来掩盖平台差异，使上层代码用一套代码就能在多个平台实现音频操作，实现跨平台能力。代码已经开源：git@github.com:season4675/AudioManager.git以上框架图显示了这个跨平台AudioManager框架，非常简单。API层对上层放出">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一个简易跨平台AudioManager详细设计">
 <meta property="og:url" content="https://season4675.github.io/2019/01/31/一个简易跨平台AudioManager详细设计/index.html">
 <meta property="og:site_name" content="Season&#39;s Notes">
-<meta property="og:description" content="因为工作原因，需要能简单的控制一些设备的播放和录音功能，就萌生了一个设计想法，设计一个AudioManager来掩盖平台差异，使上层代码用一套代码就能在多个平台实现音频操作，实现跨平台能力。代码已经开源：git@github.com:season4675/AudioManager.git">
+<meta property="og:description" content="AudioManager简介因为工作原因，需要能简单的控制一些设备的播放和录音功能，就萌生了一个设计想法，设计一个AudioManager来掩盖平台差异，使上层代码用一套代码就能在多个平台实现音频操作，实现跨平台能力。代码已经开源：git@github.com:season4675/AudioManager.git以上框架图显示了这个跨平台AudioManager框架，非常简单。API层对上层放出">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://season4675.github.io/2019/01/31/一个简易跨平台AudioManager详细设计/AudioManagerFramework.png">
-<meta property="og:updated_time" content="2019-01-31T09:13:22.327Z">
+<meta property="og:updated_time" content="2019-01-31T10:01:41.158Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一个简易跨平台AudioManager详细设计">
-<meta name="twitter:description" content="因为工作原因，需要能简单的控制一些设备的播放和录音功能，就萌生了一个设计想法，设计一个AudioManager来掩盖平台差异，使上层代码用一套代码就能在多个平台实现音频操作，实现跨平台能力。代码已经开源：git@github.com:season4675/AudioManager.git">
+<meta name="twitter:description" content="AudioManager简介因为工作原因，需要能简单的控制一些设备的播放和录音功能，就萌生了一个设计想法，设计一个AudioManager来掩盖平台差异，使上层代码用一套代码就能在多个平台实现音频操作，实现跨平台能力。代码已经开源：git@github.com:season4675/AudioManager.git以上框架图显示了这个跨平台AudioManager框架，非常简单。API层对上层放出">
 <meta name="twitter:image" content="https://season4675.github.io/2019/01/31/一个简易跨平台AudioManager详细设计/AudioManagerFramework.png">
 
 
@@ -356,7 +356,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  90
+                  231
                 </span>
               
 
@@ -393,7 +393,7 @@
       
 
       
-        <p>因为工作原因，需要能简单的控制一些设备的播放和录音功能，就萌生了一个设计想法，设计一个AudioManager来掩盖平台差异，使上层代码用一套代码就能在多个平台实现音频操作，实现跨平台能力。<br>代码已经开源：<a href="git@github.com:season4675/AudioManager.git">git@github.com:season4675/AudioManager.git</a><br><img src="/2019/01/31/一个简易跨平台AudioManager详细设计/AudioManagerFramework.png" alt="AudioManagerFramework.png"></p>
+        <h1 id="AudioManager简介"><a href="#AudioManager简介" class="headerlink" title="AudioManager简介"></a>AudioManager简介</h1><p>因为工作原因，需要能简单的控制一些设备的播放和录音功能，就萌生了一个设计想法，设计一个AudioManager来掩盖平台差异，使上层代码用一套代码就能在多个平台实现音频操作，实现跨平台能力。<br>代码已经开源：<a href="git@github.com:season4675/AudioManager.git">git@github.com:season4675/AudioManager.git</a><br><img src="/2019/01/31/一个简易跨平台AudioManager详细设计/AudioManagerFramework.png" alt="AudioManagerFramework.png"><br>以上框架图显示了这个跨平台AudioManager框架，非常简单。API层对上层放出了简易好用的接口。向下有个音频引擎适配层，根据运行平台的不同选择不同的引擎，同时这一层也加入了一定的格式转换能力。再往下就是和硬件平台强相关的音频引擎模块了。Linux平台使用ALSA和pulseaudio，Android平台可以使用OpenSLES和TinyALSA，iOS/Mac平台可以使用AudioUnit和AudioQueue，基本覆盖了当下最流行的几个平台。</p>
 
       
     </div>
@@ -425,7 +425,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>原创不易，您的支持我继续创作的最大动力！</div>
+  <div>原创不易，您的支持是我继续创作的最大动力！</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>打赏</span>
   </button>
@@ -553,8 +553,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -624,6 +633,22 @@ var jiathis_config={
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AudioManager简介"><span class="nav-number">1.</span> <span class="nav-text">AudioManager简介</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -672,7 +697,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共469字</span>
+  <span class="post-count">博客全站共610字</span>
 </div>
 
         
